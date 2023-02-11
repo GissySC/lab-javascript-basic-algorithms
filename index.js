@@ -52,8 +52,19 @@ if (comparisonResult === -1) {
 //*******************Bonus 1:*******************
 let loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non consequat turpis. Duis volutpat pharetra sagittis. Integer cursus eros ex, sit amet laoreet elit maximus vitae. Duis rutrum scelerisque nibh sit amet sagittis. Aliquam mauris nibh, euismod nec ligula nec, rutrum rutrum dui. Nulla luctus arcu et lectus placerat interdum. Sed ultrices quis quam sollicitudin dapibus. Cras non dignissim lectus, vitae congue felis. Fusce a est porta, lacinia sem nec, pharetra libero. Nullam quis elit magna. Etiam maximus ipsum ligula, ac porttitor nisi varius ut. Aliquam non purus lobortis, sagittis velit in, molestie turpis. Nullam ligula tortor, vulputate eget eros non, finibus interdum sem. Morbi vitae mi auctor, feugiat erat at, bibendum lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vestibulum quam et bibendum finibus. In in eros a justo placerat porta. Nunc sit amet dui in augue aliquet tempor quis eget leo. Praesent turpis enim, bibendum convallis neque et, tincidunt posuere erat. Nunc at sagittis massa, in sodales lectus. Etiam volutpat rutrum velit vitae fringilla. Donec eget placerat metus, et tincidunt ante. Praesent malesuada lobortis lacus tincidunt lobortis. Maecenas et turpis vel nunc commodo rutrum vitae eget tortor. Proin a cursus lorem. Praesent nunc nunc, blandit id velit consequat, mattis tincidunt tellus. Curabitur eu venenatis lectus, a luctus eros. Aliquam tempus leo in egestas sagittis. Cras sed justo vitae urna blandit dapibus et vitae sem. Sed eleifend semper felis, a cursus orci tincidunt pharetra. Pellentesque eget varius est. Suspendisse vitae maximus urna. Proin vehicula vel sapien et porttitor. Sed ac suscipit justo. Integer ac nisi at purus interdum venenatis a quis lacus. Etiam eu pellentesque purus. Vestibulum aliquam arcu et rhoncus pretium."
 
-let wordsCounter = loremIpsum.split(' ').length;
-console.log(`The number of words in the loremIpsum string is ${wordsCounter}.`);
+//Short-hand method would be:
+/*let wordsCounter = loremIpsum.split(' ').length;
+console.log(`The number of words in the loremIpsum string is ${wordsCounter}.`);*/
+
+let total_words = 0;
+let total_occurrence = 0;
+for(word of loremIpsum.split(" ")){
+  total_words ++;
+  if (word == "et") total_occurrence++;
+}
+console.log(total_words);
+console.log(total_occurrence);
+
 
 //*******************Bonus 2:*******************
 let phraseToCheck = "Was it a car or a cat I saw?";
